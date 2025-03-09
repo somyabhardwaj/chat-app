@@ -6,6 +6,6 @@ export const connectToDb = async ()=>{
       console.log( "connected to mongoose")
       return "connected to mongoose";
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
