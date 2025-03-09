@@ -12,11 +12,11 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", methods: ["GET", "POST"] })); // Allow Vite Frontend
+app.use(cors({ origin: "https://chat-app-nyjk.vercel.app", methods: ["GET", "POST"] })); // Allow Vite Frontend
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Frontend URL (Vite runs on 5173)
+    origin: "https://chat-app-nyjk.vercel.app", // Frontend URL (Vite runs on 5173)
     methods: ["GET", "POST"]
   }
 });
